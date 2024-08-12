@@ -22,9 +22,13 @@ export class User extends Base {
   }
 
   public removeFromCart(product: Product): void {
-    this._cart = this._cart.filter((p) => p.id !== product.id);
-    
-    console.log('Produto: ',product.name, ' Removido!');
+    const index = this._cart.findIndex((item) => item === product);
+    if (index === -1) {
+      console.log(product.name + ' não está no carrinho.');
+    }else {
+      console.log(product.name + ' excluído com sucesso!');
+      this._cart.splice(index, 1);
+    }
   };
 
   public showProducts(): string {
