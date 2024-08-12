@@ -15,4 +15,5 @@ product1.rate(3, user2);
 
 product1.showDetails();
 
-
+user2.addToCart(product1);
+user2.removeFromCart(product1);

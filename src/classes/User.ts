@@ -18,14 +18,17 @@ export class User extends Base {
 
   public addToCart(product: Product): void {
     this._cart.push(product);
+    console.log(product.name + ' adicionado ao carrinho!')
   }
 
   public removeFromCart(product: Product): void {
     this._cart = this._cart.filter((p) => p.id !== product.id);
-  }
+    
+    console.log('Produto: ',product.name, ' Removido!');
+  };
 
   public showProducts(): string {
-    return this._cart.map((product) => product.show()).join(", ");
+    return this._cart.map((product) => product.show()).join();
   }
 
   public rateProduct(product: Product | null, rate: Rate): void {
