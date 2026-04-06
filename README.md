@@ -1,25 +1,26 @@
-# ECommerce
+# ECommerce Domain Modeling (TypeScript)
 
-## Descrição
+## Description
 
-Este projeto consiste na modelagem de um sistema de e-commerce utilizando TypeScript, com foco na organização de entidades e na aplicação de conceitos de Programação Orientada a Objetos.
+This project focuses on the domain modeling of an e-commerce system using TypeScript, applying Object-Oriented Programming principles and emphasizing clean architecture concepts.
 
-A proposta central é representar os principais elementos de uma aplicação de comércio eletrônico — como usuários, produtos, avaliações e comentários — por meio de classes bem definidas, explorando encapsulamento, tipagem estática e estruturação de código.
-
----
-
-## Objetivo
-
-O projeto foi desenvolvido com o objetivo de consolidar conhecimentos em:
-
-- TypeScript  
-- Programação Orientada a Objetos (POO)  
-- Estruturação e organização de código  
-- Modelagem de domínio  
+It represents core business entities such as users, products, ratings, and comments, structured to reflect real-world scenarios and support scalability and maintainability.
 
 ---
 
-## Estrutura do Projeto
+## Objective
+
+The main objective of this project is to strengthen skills in:
+
+- TypeScript and static typing  
+- Object-Oriented Programming (OOP)  
+- Domain-driven design fundamentals  
+- Code organization and maintainability  
+- Separation of concerns  
+
+---
+
+## Project Structure
 
 ```
 src/
@@ -35,48 +36,65 @@ src/
      └── ratings.ts
 ```
 
-### Classes principais
+### Domain Layer
 
-- **Base**: Classe base com propriedades e comportamentos compartilhados.  
-- **User**: Representa os usuários do sistema.  
-- **Product**: Representa os produtos disponíveis.  
-- **Comment**: Estrutura para comentários associados a produtos.  
-- **Rating**: Responsável pelas avaliações atribuídas aos produtos.  
+- **Base**: Abstracts shared attributes and behaviors  
+- **User**: Represents system users and their interactions  
+- **Product**: Encapsulates product data and logic  
+- **Comment**: Handles user-generated product feedback  
+- **Rating**: Manages product evaluation logic  
 
-### Camada de dados
+### Data Simulation
 
-A pasta `db` contém estruturas utilizadas para simular a persistência de dados, permitindo testar o comportamento das entidades.
+The `db` folder simulates a persistence layer, enabling basic interaction with domain entities without a real database.
 
 ---
 
-## Tecnologias utilizadas
+## Technologies
 
 - TypeScript  
 - Node.js  
 
 ---
 
-## Considerações
+## Architectural Notes
 
-Este projeto tem caráter acadêmico e foi desenvolvido com foco na modelagem e organização de código. Não se trata de uma aplicação completa com interface ou API integrada.
+This project follows a domain-oriented structure, focusing on:
+
+- Clear entity separation  
+- Encapsulation of business rules  
+- Readable and maintainable code  
+- Foundation for scalable backend systems  
+
+Although simplified, the structure reflects concepts used in enterprise environments.
 
 ---
 
-## Como executar
+## Relevance for Enterprise Systems
 
-1. Instale as dependências:
+This project demonstrates foundational skills relevant to enterprise environments, such as:
+
+- Structured domain modeling  
+- Code organization aligned with scalable architectures  
+- Readiness for backend development and system design  
+
+---
+
+## How to Run
+
+1. Install dependencies:
 
 ```
 npm install
 ```
 
-2. Compile o projeto:
+2. Compile the project:
 
 ```
 npx tsc
 ```
 
-3. Execute o arquivo principal (ajustar conforme necessário):
+3. Run the main file (adjust if necessary):
 
 ```
 node dist/index.js
